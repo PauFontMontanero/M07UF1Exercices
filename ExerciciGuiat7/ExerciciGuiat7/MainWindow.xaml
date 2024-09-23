@@ -1,0 +1,16 @@
+﻿<Window x:Class="ExerciciGuiat7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExerciciGuiat7"
+        mc:Ignorable="d"
+        Title="Exercici 7" Height="450" Width="800">
+    <Grid>
+        <Image Source="Biel.jpeg" Width="200" Height="200" Margin="10"/>
+        <MediaElement Name="VideoElement" Source="Video.mp4" Width="400" Height="300" 
+      LoadedBehavior="Manual" UnloadedBehavior="Stop" Margin="10"/>
+        <Button Content="Reproduir" Width="100" Height="30" Click="ReproduirButton_Click" 
+        Margin="10,320,0,0"/>
+    </Grid>
+</Window>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="ExerciciPractic4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExerciciPractic4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <RadioButton Name="PersonaFisica" Content="Persona Fisica" GroupName="Options" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Margin="0,0,-28,0" VerticalAlignment="Center" Checked="PersonaFisica_Checked" IsChecked="False"/>
+        <RadioButton Name="Empresa" Content="Empresa" GroupName="Options" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Margin="0,30,0,0" VerticalAlignment="Center" Checked="Empresa_Checked"/>
+        <Label Name="NomLabel" Content="" Grid.Row="1" Grid.Column="1" Margin="10,10,506,260"/>
+        <Label Name="IdentificadorLabel" Content="" Grid.Row="1" Grid.Column="1" Margin="10,87,506,185"/>
+        <TextBox Name="NomTextBox" Grid.Row="1" Grid.Column="1" Margin="115,9,265,266" TextChanged="NomTextBox_TextChanged"/>
+        <TextBox Name="IdentificadorTextBox" Grid.Row="1" Grid.Column="1" Margin="115,87,265,185" TextChanged="IdentificadorTextBox_TextChanged"/>
+        <Label Name="AlertaNom" Content="Nom Obligatori!" Grid.Row="1" Grid.Column="1" Margin="490,8,10,266" Foreground="Red"/>
+        <Label Name="AlertaIdentificador" Content="Identificador Obligatori!" Grid.Row="1" Grid.Column="1" Margin="490,87,10,185" Foreground="Red"/>
+        <Button Name="Comprovar" Content="COMPROBAR DADES!" Grid.Row="1" Grid.Column="1" Margin="10,235,10,0" VerticalAlignment="Top" Height="63" Click="Comprovar_Click" IsEnabled="False"/>
+    </Grid>
+</Window>

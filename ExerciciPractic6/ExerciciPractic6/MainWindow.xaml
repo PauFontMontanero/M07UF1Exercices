@@ -1,0 +1,32 @@
+﻿<Window x:Class="ExerciciPractic6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExerciciPractic6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="Video" Margin="10" Grid.Row="0" Grid.Column="0">
+            <MediaElement Name="VideoFrame" Width="350" Height="375" LoadedBehavior="Manual" UnloadedBehavior="Stop" Margin="10"/>
+            <StackPanel Orientation="Horizontal" Name="VideoButtons"  HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Button VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="50" Width="150" Margin="0,0,10,0" Content="Start" Name="Start" Click="Start_Click"/>
+                <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="50" Width="150" Content="Stop" Name="Stop" Click="Stop_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="Imatges" Margin="10" Grid.Row="0" Grid.Column="1">
+            <Image Name="ImageFrame" Source="Images/Archer.jpg" Width="350" Height="375" Margin="10"/>
+            <StackPanel Orientation="Horizontal" Name="ImageButtons"  HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Button VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="50" Width="150" Margin="0,0,10,0" Content="&lt;&lt;&lt;- Previous" Name="Previous" Click="Previous_Click"/>
+                <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="50" Width="150" Content="Next -&gt;&gt;&gt;" Name="Next" Click="Next_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
